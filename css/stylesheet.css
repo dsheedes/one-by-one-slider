@@ -1,0 +1,40 @@
+.obos-container{
+    flex-wrap: nowrap !important;
+    overflow-x:hidden;
+    overflow-y:hidden;
+    /* justify-content: center; */
+    position: absolute;
+}
+.obos-item{
+
+}
+
+.obos-nav-left, .obos-nav-right{
+}
+.obos-nav-left{
+    position: absolute;
+    width:15%;
+
+    background-color: rgba(0, 0, 0, 0.2);
+    z-index:9999;
+}
+
+.obos-nav-left:hover{
+    background-color: rgba(0, 0, 0, 0.5);
+    cursor:pointer;
+}
+
+.obos-nav-right{
+    position: absolute;
+    right:0;
+    width:15%;
+
+    background-color: rgba(0, 0, 0, 0.2);
+
+    z-index:9999;
+}
+
+.obos-nav-right:hover{
+    background-color: rgba(0, 0, 0, 0.5);
+    cursor:pointer;
+}
