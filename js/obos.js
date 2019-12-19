@@ -35,6 +35,10 @@
         var position = 0;
         var left = 0;
 
+        //Initial offset of the scrollbar
+
+        obosContainer.scrollLeft($(".obos-item").width()/2);
+
         //Let's hook to our navigation
 
         $(".obos-nav-left").click(function(){
