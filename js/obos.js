@@ -18,7 +18,7 @@
         var padding = calculatePadding(element);
 
         $(element).animate({
-            scrollLeft: scrollPosition + amount + padding[1] + padding[2]
+            scrollLeft: scrollPosition + amount + padding[1] + padding[3]
         }, 800);
 
     }
@@ -29,7 +29,7 @@
 
         var padding = calculatePadding(element);
         $(element).animate({
-            scrollLeft: scrollPosition - amount - padding[1] - padding[2]
+            scrollLeft: scrollPosition - amount - padding[1] - padding[3]
         }, 800);
     }
 
