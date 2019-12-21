@@ -1,10 +1,24 @@
 (function( $ ){
+    //Let's take into consideration the padding of elements while scrolling too!
+    function calculatePadding(element){
+        var padding = [];
+        //top right bottom left
+
+        padding.push(parseFloat(element.css('padding-top')));
+        padding.push(parseFloat(element.css('padding-right')));
+        padding.push(parseFloat(element.css('padding-bottom')));
+        padding.push(parseFloat(element.css('padding-left')));
+
+        return padding;
+    }
     function moveRight(element, amount){
 
         var scrollPosition = element.scrollLeft();
 
+        var padding = calculatePadding(element);
+
         $(element).animate({
-            scrollLeft: scrollPosition + amount
+            scrollLeft: scrollPosition + amount + padding[1] + padding[2]
         }, 800);
 
     }
@@ -12,8 +26,10 @@
     function moveLeft(element, amount){
 
         var scrollPosition = element.scrollLeft();
+
+        var padding = calculatePadding(element);
         $(element).animate({
-            scrollLeft: scrollPosition - amount
+            scrollLeft: scrollPosition - amount - padding[1] - padding[2]
         }, 800);
     }
 
